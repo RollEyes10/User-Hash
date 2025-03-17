@@ -34,6 +34,9 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.labelUserName = new System.Windows.Forms.Label();
             this.labelPassword = new System.Windows.Forms.Label();
+            this.buttonLogIn = new System.Windows.Forms.Button();
+            this.buttonSave = new System.Windows.Forms.Button();
+            this.checkBoxVision = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // textBoxUserName
@@ -73,11 +76,47 @@
             this.labelPassword.TabIndex = 4;
             this.labelPassword.Text = "Heslo";
             // 
+            // buttonLogIn
+            // 
+            this.buttonLogIn.Location = new System.Drawing.Point(396, 193);
+            this.buttonLogIn.Name = "buttonLogIn";
+            this.buttonLogIn.Size = new System.Drawing.Size(139, 31);
+            this.buttonLogIn.TabIndex = 5;
+            this.buttonLogIn.Text = "Přihlásit";
+            this.buttonLogIn.UseVisualStyleBackColor = true;
+            this.buttonLogIn.Click += new System.EventHandler(this.buttonLogIn_Click);
+            // 
+            // buttonSave
+            // 
+            this.buttonSave.Enabled = false;
+            this.buttonSave.Location = new System.Drawing.Point(12, 191);
+            this.buttonSave.Name = "buttonSave";
+            this.buttonSave.Size = new System.Drawing.Size(139, 31);
+            this.buttonSave.TabIndex = 6;
+            this.buttonSave.Text = "Uložit";
+            this.buttonSave.UseVisualStyleBackColor = true;
+            this.buttonSave.Visible = false;
+            this.buttonSave.Click += new System.EventHandler(this.buttonSave_Click);
+            // 
+            // checkBoxVision
+            // 
+            this.checkBoxVision.AutoSize = true;
+            this.checkBoxVision.Location = new System.Drawing.Point(106, 144);
+            this.checkBoxVision.Name = "checkBoxVision";
+            this.checkBoxVision.Size = new System.Drawing.Size(94, 17);
+            this.checkBoxVision.TabIndex = 7;
+            this.checkBoxVision.Text = "Viditelné heslo";
+            this.checkBoxVision.UseVisualStyleBackColor = true;
+            this.checkBoxVision.CheckedChanged += new System.EventHandler(this.checkBoxVision_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 234);
+            this.Controls.Add(this.checkBoxVision);
+            this.Controls.Add(this.buttonSave);
+            this.Controls.Add(this.buttonLogIn);
             this.Controls.Add(this.labelPassword);
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.textBoxPassword);
@@ -96,6 +135,9 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.Label labelUserName;
         private System.Windows.Forms.Label labelPassword;
+        private System.Windows.Forms.Button buttonLogIn;
+        private System.Windows.Forms.Button buttonSave;
+        private System.Windows.Forms.CheckBox checkBoxVision;
     }
 }
 
