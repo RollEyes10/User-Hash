@@ -1,42 +1,46 @@
-# User Management Application (C# WinForms)
+# 🧑‍💻 User Management App (C# WinForms)
 
-Tento projekt je jednoduchá desktopová aplikace v **C# WinForms**, která umožňuje správu uživatelských účtů s využitím:
-
-- **Serializace do XML** (uživatelé a jejich hesla jsou ukládána v souboru `users.xml`)  
-- **Dědičnosti** (Admin a Guest dědí od základní třídy User)  
-- **Hashování hesel** (hesla nejsou ukládána v čitelné podobě)  
-- **Více formulářů** (hlavní přihlášení, správa uživatelů, změna hesla)  
+Tento projekt je desktopová aplikace v **C# Windows Forms**, která ukazuje práci s:
+- **OOP (dědičnost)** – uživatelé dědí od společné třídy `User` (Admin, Guest)  
+- **XML serializací** – uživatelé a jejich hesla se ukládají do `users.xml`  
+- **Zabezpečením hesel** – hesla jsou uložená zakódovaná (Base64)  
+- **Více formuláři** – formulář pro přihlášení a samostatný formulář pro administrátora  
 
 ---
 
 ## ✨ Funkcionality
 
-- **Přihlášení uživatele**  
-  - Aplikace kontroluje jméno a heslo proti datům uloženým v XML.  
-  - Defaultní účty po prvním spuštění:  
-    - `Admin / heslo` (má práva spravovat uživatele)  
-    - `Guest / heslo` (běžný uživatel)  
+- **Přihlášení uživatele**
+  - Ověření podle jména a hesla.
+  - Defaultně existují účty:  
+    - `Admin / heslo`  
+    - `Guest / heslo`
 
-- **Změna hesla (Guest)**  
-  - Po přihlášení se zobrazí možnost změny hesla.  
-  - Nové heslo se uloží do XML.  
+- **Guest (běžný uživatel)**
+  - Po přihlášení může měnit své heslo.  
 
-- **Správa uživatelů (Admin)**  
-  - Admin má přístup k samostatnému formuláři.  
-  - Může zobrazit seznam všech uživatelů.  
-  - Může vybranému uživateli nastavit nové heslo.  
+- **Admin**
+  - Po přihlášení se otevře speciální formulář (`PasswordForm`).
+  - Vidí seznam uživatelů.
+  - Může:
+    - vybranému uživateli přenastavit heslo,  
+    - přidat nového uživatele (jméno, heslo, role).  
+
+- **Soubor s uživateli (`users.xml`)**
+  - Vytvoří se automaticky při prvním spuštění.
+  - Je uložený ve formátu Base64 (hesla nejsou čitelná přímo v souboru).
 
 ---
 
 ## 🛠️ Použité technologie
 - **C# .NET (Windows Forms)**  
 - **XML serializace**  
-- **Hashing (pro bezpečné ukládání hesel)**  
-- **OOP principy (dědičnost, zapouzdření, polymorfismus)**  
+- **Base64 encoding**  
+- **OOP principy (dědičnost, polymorfismus, zapouzdření)**  
 
 ---
 
-## 🚀 Spuštění projektu
+## 🚀 Spuštění
 1. Naklonuj repozitář:
    ```bash
    git clone https://github.com/uzivatel/repozitar.git
