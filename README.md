@@ -43,7 +43,7 @@ Tento projekt je desktopová aplikace v **C# Windows Forms**, která ukazuje pr�
 ## 🚀 Spuštění
 1. Naklonuj repozitář:
    ```bash
-   git clone https://github.com/uzivatel/repozitar.git
+   git clone https://github.com/RollEyes10/repozitar.git
 
 ## 🔧 Možné rozšíření
 - zapínání viditelnosti hesla
