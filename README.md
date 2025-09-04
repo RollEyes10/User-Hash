@@ -44,3 +44,6 @@ Tento projekt je desktopová aplikace v **C# Windows Forms**, která ukazuje pr�
 1. Naklonuj repozitář:
    ```bash
    git clone https://github.com/uzivatel/repozitar.git
+
+## 🔧 Možné rozšíření
+- zapínání viditelnosti hesla
